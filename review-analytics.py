@@ -31,3 +31,12 @@ for d in data:
 print('一共有', len(good), '筆資料有提到good')
 print(good[0])
 print(good[1])
+
+good = [d for d in data if 'good' in d]
+print(len(good))
+
+bad = ['bad' in d for d in data] #會有一百萬個True / False # 快寫法 List comprehension
+for d in data:
+	bad.append('bad' in d)
+
+
